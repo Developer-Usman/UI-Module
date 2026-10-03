@@ -24278,9 +24278,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4255613263449387944}
   m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &8882564822976513007
 MonoBehaviour:
@@ -48684,6 +48684,7 @@ GameObject:
   - component: {fileID: 2149228091797681723}
   - component: {fileID: 1428454630277582065}
   - component: {fileID: 9087018847484458857}
+  - component: {fileID: 2810696481308495505}
   m_Layer: 5
   m_Name: MyProgressScreen
   m_TagString: Untagged
@@ -48720,9 +48721,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8494853061280112327}
   m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!114 &9087018847484458857
 MonoBehaviour:
@@ -48749,6 +48750,19 @@ MonoBehaviour:
   onHide:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2810696481308495505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8494853061280112327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 055e705dc2192437ea3492fa55e095a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionContainer: {fileID: 11400000, guid: 324629392d76e45b8b82ca61d8029d64, type: 2}
 --- !u!1 &8495018638351074782
 GameObject:
   m_ObjectHideFlags: 0
@@ -50779,6 +50793,7 @@ GameObject:
   - component: {fileID: 6958862847705832340}
   - component: {fileID: 7534736796418122508}
   - component: {fileID: 7220031602941863060}
+  - component: {fileID: 484375192675797279}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -50844,6 +50859,22 @@ MonoBehaviour:
   onHide:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &484375192675797279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8772977283411105322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57278e94760474a2cad175174e2fb61b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInit: 0
+  garageView: {fileID: 8882564822976513007}
+  playButton: {fileID: 703444774548408167}
+  garageButton: {fileID: 3202103805106206714}
 --- !u!1 &8783803425984130062
 GameObject:
   m_ObjectHideFlags: 0

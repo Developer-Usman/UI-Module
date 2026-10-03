@@ -1,27 +1,19 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-[DisallowMultipleComponent]
 public class MainMenuScreen : MonoBehaviour
 {
     [Header("Init")]
     [SerializeField] private bool isInit;
 
-    [Header("Links")]
-    [SerializeField] private string rateUsUrl = "https://www.google.com";
-    [SerializeField] private string privacyPolicyUrl = "https://www.freeprivacypolicy.com/live/4317c7b8-b2ca-425b-b28c-1dc12580ddfb";
-
     [Header("Views")]
-    [SerializeField] private View modeView;
-    [SerializeField] private View settingsView;
-
+    [SerializeField] private View garageView;
+    private View _view;
+    
     [Header("Buttons")]
     [SerializeField] private Button playButton;
-    [SerializeField] private Button settingsButton;
-    [SerializeField] private Button rateUsButton;
-    [SerializeField] private Button privacyPolicyButton;
+    [SerializeField] private Button garageButton;
 
-    private View _view;
 
     private void Awake()
     {
@@ -31,6 +23,8 @@ public class MainMenuScreen : MonoBehaviour
         _view.OnHideEvent.AddListener(OnViewHide);
 
         RegisterButtonListeners();
+        
+        
     }
 
     private void OnDestroy()
@@ -73,17 +67,14 @@ public class MainMenuScreen : MonoBehaviour
     private void RegisterButtonListeners()
     {
         playButton.onClick.AddListener(OnPlayButtonClicked);
-        settingsButton.onClick.AddListener(OnSettingsButtonClicked);
-        rateUsButton.onClick.AddListener(OnRateUsButtonClicked);
-        privacyPolicyButton.onClick.AddListener(OnPrivacyPolicyButtonClicked);
+        garageButton.onClick.AddListener(OnGarageButtonClicked);
     }
 
     private void RemoveButtonListeners()
     {
         playButton.onClick.RemoveListener(OnPlayButtonClicked);
-        settingsButton.onClick.RemoveListener(OnSettingsButtonClicked);
-        rateUsButton.onClick.RemoveListener(OnRateUsButtonClicked);
-        privacyPolicyButton.onClick.RemoveListener(OnPrivacyPolicyButtonClicked);
+        garageButton.onClick.RemoveListener(OnGarageButtonClicked);
+
     }
 
     #endregion
@@ -92,22 +83,12 @@ public class MainMenuScreen : MonoBehaviour
 
     private void OnPlayButtonClicked()
     {
-        ViewHandler.Show(modeView);
+       ViewHandler.Show(garageView);
     }
 
-    private void OnSettingsButtonClicked()
+    private void OnGarageButtonClicked()
     {
-        ViewHandler.Show(settingsView);
-    }
-
-    private void OnRateUsButtonClicked()
-    {
-        Application.OpenURL(rateUsUrl);
-    }
-
-    private void OnPrivacyPolicyButtonClicked()
-    {
-        Application.OpenURL(privacyPolicyUrl);
+        ViewHandler.Show(garageView);
     }
 
     #endregion
