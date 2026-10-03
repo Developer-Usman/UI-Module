@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69783f08d8c114b61a4ba69babe0a67d, type: 3}
+  m_Name: Mission_ 1
+  m_EditorClassIdentifier: 
+  missionID: targetdistanceday1
+  missionTitle: targetdistanceday1----
+  missionType: 1
+  targetValue: 100
+  rewards:
+  - type: 1
+    amount: 20
+    icon: {fileID: 0}
+  - type: 2
+    amount: 100
+    icon: {fileID: 0}
+  - type: 3
+    amount: 5
+    icon: {fileID: 0}
+  - type: 0
+    amount: 75
+    icon: {fileID: 0}
