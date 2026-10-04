@@ -879,9 +879,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 2139977525}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -1026,7 +1026,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f5d289e50980441cdb7630a9f623107e, type: 2}
   - {fileID: 11400000, guid: b9ee7c22c32034602a2abc5e24dd9c3f, type: 2}
   - {fileID: 11400000, guid: b6ced5c9a1c6a4cbba0a54a706e40532, type: 2}
-  dailyMissionCount: 3
+  dailyMissionCount: 5
   saveKey: DailyMissionSave
   saveInterval: 3
 --- !u!4 &1493268291
@@ -1180,6 +1180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2139977525}
   - component: {fileID: 2139977526}
+  - component: {fileID: 2139977527}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -1204,7 +1205,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 300}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2139977526
 MonoBehaviour:
@@ -1232,6 +1233,20 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &2139977527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139977524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!114 &2959306420037133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45670,7 +45685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInit: 0
-  cardPrefab: {fileID: 0}
+  cardPrefab: {fileID: -7362255597259557719, guid: cf7dab6b121794252b0d88fa79f9c9f8, type: 3}
   cardContainer: {fileID: 2139977525}
   headerCountText: {fileID: 6167375195981504955}
 --- !u!224 &7887602711553030839

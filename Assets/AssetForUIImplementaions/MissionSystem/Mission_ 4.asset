@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Mission_ 4
   m_EditorClassIdentifier: 
   missionID: anymissionday1
-  missionTitle: anymissionday1----
+  missionTitle: Complete any 1 Mission
   missionType: 4
-  targetValue: 2
+  targetValue: 1
   rewards:
   - type: 1
     amount: 20

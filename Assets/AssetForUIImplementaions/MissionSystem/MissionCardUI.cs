@@ -51,6 +51,7 @@ namespace RP_MissionSystem
             titleText.text = data.MissionTitle;
             BindRewards();
             Refresh();
+
         }
 
         /// <summary>Redraws progress + claim state. Cheap; called only when the manager reports a change.</summary>
@@ -87,16 +88,39 @@ namespace RP_MissionSystem
             for (int i = 0; i < rewardSlots.Length; i++)
             {
                 RewardSlot slot = rewardSlots[i];
+                if (slot.root == null)
+                {
+                    Debug.LogWarning($"[MissionCardUI] Reward Slot {i} has no Root assigned on '{name}'.", this);
+                    continue;
+                }
+
                 bool used = i < rewardCount;
                 slot.root.SetActive(used);
 
                 if (!used)
                     continue;
 
+                // Fallback: if Icon / Amount Text weren't assigned in the Inspector, look under the slot root.
+                if (slot.icon == null) slot.icon = slot.root.GetComponentInChildren<Image>(true);
+                if (slot.amountText == null) slot.amountText = slot.root.GetComponentInChildren<TMP_Text>(true);
+                rewardSlots[i] = slot; // Cache the lookup (struct copy).
+
                 MissionReward reward = _data.Rewards[i];
-                slot.icon.sprite = reward.icon;
-                slot.icon.enabled = reward.icon != null;
-                slot.amountText.SetText("{0}", reward.amount);
+
+                if (slot.icon != null)
+                {
+                    slot.icon.sprite = reward.icon;
+                    slot.icon.enabled = reward.icon != null;
+                }
+                else
+                {
+                    Debug.LogWarning($"[MissionCardUI] Reward Slot {i} has no Icon Image on '{name}'.", this);
+                }
+
+                if (slot.amountText != null)
+                    slot.amountText.SetText("{0}", reward.amount);
+                else
+                    Debug.LogWarning($"[MissionCardUI] Reward Slot {i} has no Amount Text on '{name}'.", this);
             }
         }
 

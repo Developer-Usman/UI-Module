@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Mission_
   m_EditorClassIdentifier: 
   missionID: targetspeedday1
-  missionTitle: targetspeedday1----
+  missionTitle: Reach 1 time at 200 km/h
   missionType: 0
-  targetValue: 100
+  targetValue: 1
   rewards:
   - type: 1
     amount: 20

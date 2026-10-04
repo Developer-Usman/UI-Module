@@ -13,19 +13,16 @@ MonoBehaviour:
   m_Name: Mission_ 1
   m_EditorClassIdentifier: 
   missionID: targetdistanceday1
-  missionTitle: targetdistanceday1----
+  missionTitle: Travel 1 KM
   missionType: 1
-  targetValue: 100
+  targetValue: 1
   rewards:
   - type: 1
-    amount: 20
+    amount: 25
     icon: {fileID: 0}
   - type: 2
-    amount: 100
+    amount: 105
     icon: {fileID: 0}
   - type: 3
-    amount: 5
-    icon: {fileID: 0}
-  - type: 0
-    amount: 75
+    amount: 10
     icon: {fileID: 0}

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Mission_ 3
   m_EditorClassIdentifier: 
   missionID: targetheightday1
-  missionTitle: targetheightday1----
+  missionTitle: Jump 20m above from the Ground
   missionType: 3
-  targetValue: 10
+  targetValue: 3
   rewards:
   - type: 1
     amount: 20
